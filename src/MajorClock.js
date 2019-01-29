@@ -15,8 +15,24 @@ const ms2Time = (milliseconds) => {
   return result;
 }
 
+const style = {
+  'fontFamily': 'monospace',
+  'color': 'red'
+}
+
 const MajorClock = ({milliseconds=0}) => {
-    return <h1>{ms2Time(milliseconds)}</h1>
+  return (
+    <React.Fragment>
+      <style jsx> {`
+        h1 {
+          font-family: monospace;
+          color: #ff0000
+        }
+      `}
+      </style>
+      <h1>{ms2Time(milliseconds)}</h1>
+    </React.Fragment>  
+  ) 
 }
 
 export default MajorClock;
