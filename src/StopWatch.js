@@ -52,7 +52,10 @@ class StopWatch extends Component {
                     }
                 `}</style>
                 <h1>秒表</h1>
-                <MajorClock milliseconds={this.state.currentTime - this.state.startTime}/>
+                <MajorClock 
+                    milliseconds={this.state.currentTime - this.state.startTime}
+                    activated={this.state.isStarted}
+                    />
                 <SplitTimes value={this.state.splits}/>
                 <ControlButtons 
                     activated={this.state.isStarted} 

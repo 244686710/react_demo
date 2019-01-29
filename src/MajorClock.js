@@ -20,13 +20,13 @@ const style = {
   'color': 'red'
 }
 
-const MajorClock = ({milliseconds=0}) => {
+const MajorClock = ({milliseconds=0, activated=false}) => {
   return (
     <React.Fragment>
       <style jsx> {`
         h1 {
+          color: ${activated ? 'red' : 'black'};
           font-family: monospace;
-          color: #ff0000
         }
       `}
       </style>
