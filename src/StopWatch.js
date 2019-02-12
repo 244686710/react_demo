@@ -25,7 +25,7 @@ class StopWatch extends Component {
             startTime:  new Date(),
             currentTime: new Date()
         })
-        
+
         this.intervalHandle = setInterval(() => {
             this.setState({currentTime: new Date()});
         }, 1000 / 60);
@@ -46,21 +46,21 @@ class StopWatch extends Component {
     render () {
         return (
             <Fragment>
-                <style jsx>{`
+                <style jsx="true">{`
                     h1 {
                         color: green
                     }
                 `}</style>
                 <h1>秒表</h1>
-                <MajorClock 
+                <MajorClock
                     milliseconds={this.state.currentTime - this.state.startTime}
                     activated={this.state.isStarted}
                     />
                 <SplitTimes value={this.state.splits}/>
-                <ControlButtons 
-                    activated={this.state.isStarted} 
-                    onPause={this.onPause} 
-                    onStart={this.onStart} 
+                <ControlButtons
+                    activated={this.state.isStarted}
+                    onPause={this.onPause}
+                    onStart={this.onStart}
                     onSplit={this.onSplit}
                     onReset={this.onReset}
                     />

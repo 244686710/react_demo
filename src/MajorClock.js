@@ -23,7 +23,7 @@ const style = {
 const MajorClock = ({milliseconds=0, activated=false}) => {
   return (
     <React.Fragment>
-      <style jsx> {`
+      <style jsx="true"> {`
         h1 {
           color: ${activated ? 'red' : 'black'};
           font-family: monospace;
@@ -31,8 +31,8 @@ const MajorClock = ({milliseconds=0, activated=false}) => {
       `}
       </style>
       <h1>{ms2Time(milliseconds)}</h1>
-    </React.Fragment>  
-  ) 
+    </React.Fragment>
+  )
 }
 
 export default MajorClock;
